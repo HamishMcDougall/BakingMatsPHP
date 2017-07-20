@@ -328,7 +328,7 @@
                                   <script
                                   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                   data-key="{{  config('services.stripe.key') }}"
-                                  data-amount="2500"
+                                  data-amount="999"
                                   data-name="Cheapbakingmats"
                                   data-description="1 set of baking mats"
                                   data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
