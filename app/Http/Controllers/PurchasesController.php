@@ -23,7 +23,7 @@ class PurchasesController extends Controller
       Charge::create([
 
         'customer' => $customer->id,
-        'amount' => 999,
+        'amount' => 2999,
         'currency' => 'aud'
 
       ]);

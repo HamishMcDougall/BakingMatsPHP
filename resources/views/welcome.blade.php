@@ -43,7 +43,7 @@
     color: white;
   }
   a{
-    color:white;
+    color:blue;
   }
 
   .business-header {
@@ -264,7 +264,31 @@
         <nav class="navbar navbar-fixed-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><span class="navbar-brand">Cheap Silicone Baking Mats</span></div>
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><span class="navbar-brand">Cheap Silicone Baking Mats</span>
+
+              <div class="pull-right" style="padding-top:10px;">
+                    <form action="/purchases" method="POST">
+
+                      {{ csrf_field() }}
+
+                      <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="{{  config('services.stripe.key') }}"
+                      data-amount="2999"
+                      data-name="Cheapbakingmats"
+                      data-description="1 baking mat"
+                      data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                      data-locale="auto"
+                       data-shippingAddress="true"
+                      data-currency="aud"
+                      data-label="Buy Now"
+                      >
+                      </script>
+                      </form>
+
+              </div>
+
+            </div>
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav pull-right">
                   <li>
@@ -303,20 +327,14 @@
                           Durable
 
                         </li>
-                        <li class="list-group-item"><i class="fa fa-check"></i>
-                          Free Postage
 
-                          <br>
-                        anywhere in Australia
-
-                        </li>
                       </ul>
                       <div class="panel-body priceWhite text-center">
                         <p class="oldPriceP2">
                         Was
-                      <span class="oldPrice">$19.99</span></p><span class="oldPriceP">Now </span>
+                      <span class="oldPrice">$32.50</span></p><span class="oldPriceP">Now </span>
 
-                      <span class="newPrice"><strong>$9.95</strong></span></div>
+                      <span class="newPrice"><strong>$19.95</strong></span><h6>+ postage ($10.00)</h6></div>
                           <div class="panel-footer">
                             <div>
 
@@ -328,13 +346,15 @@
                                   <script
                                   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                   data-key="{{  config('services.stripe.key') }}"
-                                  data-amount="999"
+                                  data-amount="2999"
                                   data-name="Cheapbakingmats"
-                                  data-description="1 set of baking mats"
+                                  data-description="1 baking mat"
                                   data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
                                   data-locale="auto"
-                                   data-shippingAddress="true"
-                                  data-currency="aud">
+                                  data-shippingAddress="true"
+                                  data-currency="aud"
+                                  data-label="Buy Now"
+                                  >
                                   </script>
                                   </form>
 
@@ -411,6 +431,9 @@
                       </div>
                       <div class="col-lg-12 foooter">
                         <p>Copyright © Silicone Baking Mats</p>
+                          <br><a href ="/LimitationonLiability">Limitation on Liability</a>
+                          <a href ="/WebsiteTermsofUse">Website Terms of Use</a>
+                          <a href ="/pricavypolicy">Privacy Policy</a>
                       </div>
                     </div>
                   </div>

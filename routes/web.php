@@ -16,4 +16,19 @@ Route::get('/', function () {
 });
 
 
+
+Route::get('/LimitationonLiability', function () {
+    return view('LimitationonLiability');
+});
+
+
+Route::get('/WebsiteTermsofUse', function () {
+    return view('WebsiteTermsofUse');
+});
+
+Route::get('/pricavypolicy', function () {
+    return view('pricavypolicy');
+});
+
+
 Route::post('purchases','PurchasesController@store');
